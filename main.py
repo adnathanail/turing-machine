@@ -42,16 +42,3 @@ def turing_machine(transition_functions: list[TransitionFunction], tape: list[st
         state = to_state
 
     return tape
-
-
-tfs = [
-    TransitionFunction(0, "", 1, TapeMovement.RIGHT),
-    TransitionFunction(0, "1", 1, TapeMovement.RIGHT),
-    TransitionFunction(1, "", 2, "1"),
-    TransitionFunction(1, "1", 1, TapeMovement.RIGHT),
-    TransitionFunction(2, "", None, ""),
-    TransitionFunction(2, "1", 2, TapeMovement.LEFT),
-]
-t: list[str] = ["", "1", "1", ""]
-print(t)
-print(turing_machine(tfs, t))
